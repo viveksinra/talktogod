@@ -1,0 +1,22 @@
+#mainBg{
+    background-color: #e2e1dd;
+    height: 100vh;
+    overflow: hidden;
+}
+#topBg{
+    height: 100px;
+    width: 100%;
+    background-color: #00a884;
+}
+#mainContainer{
+  margin-top: -80px;
+  background-color: #fff;
+  height: 100vh;
+}
+@media (min-width: 750px) {
+    #mainContainer{
+        margin-bottom: 20px;
+        height: 95vh;
+      
+    }
+  }

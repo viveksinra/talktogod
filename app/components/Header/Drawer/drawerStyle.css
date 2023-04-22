@@ -1,0 +1,37 @@
+#drawerBg{
+    border-right: 1px solid #bdf5e9;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#userBg{
+    height: 65px;
+    background-color: #f5f5f5;
+    border-right: 1px solid rgb(208, 212, 240);
+    display: flex;
+    align-items: center;
+    padding-left:10px ;
+}
+
+#searchBg{
+    display: flex;
+    align-items: center;
+    height: 50px; 
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-bottom: 1px solid #d3f3d5;
+}
+.textBox{
+    margin-left: 10px;
+    border-bottom: 1px solid #cdf1f1;
+    width: 100%;
+}
+
+@media (min-width: 750px) {
+    #drawerBg{
+        height: 78vh;
+    }
+  }

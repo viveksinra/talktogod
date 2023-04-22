@@ -1,0 +1,101 @@
+#appHeader{
+    /* position: relative; */
+    box-shadow: none;
+}
+#heroText{
+    margin-left: 10px;
+    
+}
+#heroText h6{
+    line-height: 1;
+    font-size: 16px;
+    color: rgb(12, 145, 12);
+}
+
+#bottomNav{
+    position: fixed;
+    bottom: 0;
+    max-width: 100%;
+    /* border: 1px solid red; */
+}
+#chatArea{
+    padding: 10px 30px;
+    /* border: 1px solid red; */
+    background-image: url("https://inspiration.org/wp-content/uploads/2022/05/14-Questions-and-Answers-About-Heaven.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#disclaimer{
+    background-color: #ffeecd; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #000;
+    max-width:fit-content;
+    align-self: center;
+}
+.userChat{
+    background-color: #d9fdd3;
+    color: black;
+    margin-top: 5px;
+    max-width:fit-content;
+    padding-left: 7px;
+    padding-right: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+    margin-left: auto; 
+    margin-right: 0;
+    position: relative;
+}
+.userChat:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #d9fdd3;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #d9fdd3;
+  border-bottom: 10px solid transparent;
+  right: -10px;
+  top: 0px;
+  }
+
+.replyChat{
+    position: relative;
+    text-align: left;
+    max-width:fit-content;
+    margin-top: 5px;
+    padding-left: 12px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+    background-color: #dff5f5;
+    color: rgb(6, 75, 75);
+}
+.replyChat:before{
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #dff5f5;
+  border-top: 10px solid #dff5f5;
+  border-bottom: 10px solid transparent;
+  left: -10px;
+  top: 0px;
+}
+@media (min-width: 750px) {
+    #bottomNav{
+        margin-bottom: 20px;
+        max-width: 72%;
+    }
+  }
