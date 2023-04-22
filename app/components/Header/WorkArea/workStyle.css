@@ -2,6 +2,21 @@
     /* position: relative; */
     box-shadow: none;
 }
+#avatarImg{
+    /* position: absolute; */
+    top: 0em;
+    left: 0em;
+    z-index: 1;
+}
+.img-border{
+    position: absolute;
+    left: -67px;
+    transform: rotate(30deg);
+    z-index: 0;
+    fill: #fff;
+    stroke: #29e9bf;
+    stroke-dasharray: 0 0;
+}
 #heroText{
     margin-left: 10px;
     
@@ -20,7 +35,6 @@
 }
 #chatArea{
     padding: 10px 30px;
-    /* border: 1px solid red; */
     background-image: url("https://inspiration.org/wp-content/uploads/2022/05/14-Questions-and-Answers-About-Heaven.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,5 +111,14 @@
     #bottomNav{
         margin-bottom: 20px;
         max-width: 72%;
+    }
+    .img-border{
+        position: absolute;
+        left: -103px;
+        transform: rotate(30deg);
+        z-index: 0;
+        fill: #fff;
+        stroke: #29e9bf;
+        stroke-dasharray: 0 0;
     }
   }

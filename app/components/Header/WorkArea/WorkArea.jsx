@@ -2,9 +2,38 @@ import "./workStyle.css"
 import {DRAWER} from "../../Context/types"
 import MainContext from "../../Context/MainContext";
 import { useContext, useEffect, useState } from "react";
-import { AppBar,Toolbar,IconButton,Typography,Avatar,InputBase,Divider } from '@mui/material';
+import { AppBar,Toolbar,IconButton,Typography,Avatar,InputBase,Divider,Badge,styled } from '@mui/material';
 
 import { FcMenu,FcAdvance } from "react-icons/fc";
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    backgroundColor: '#44b700',
+    color: '#44b700',
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+    '&::after': {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      borderRadius: '50%',
+      animation: 'ripple 1.2s infinite ease-in-out',
+      border: '1px solid currentColor',
+      content: '""',
+    },
+  },
+  '@keyframes ripple': {
+    '0%': {
+      transform: 'scale(.8)',
+      opacity: 1,
+    },
+    '100%': {
+      transform: 'scale(2.4)',
+      opacity: 0,
+    },
+  },
+}));
 
 const WorkArea = () => {
   const {state, dispatch} = useContext(MainContext);
@@ -35,7 +64,22 @@ const WorkArea = () => {
           >
             <FcMenu />
           </IconButton>
-          <Avatar alt={active && active.title} sx={{ width: 46, height: 46 }} src={active && active.icon} />
+
+          <StyledBadge
+        overlap="circular"
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        variant="dot"
+      >
+          <Avatar id="avatarImg" alt={active && active.title} sx={{ width: 46, height: 46 }}  src={active && active.icon}/>
+      </StyledBadge>
+
+          
+          <svg className="img-border">
+          <circle r="11.5%" cx="50%" cy="50%" stroke-width="2"></circle>
+          </svg>
+        
+      
+          
           <div id="heroText">
           <Typography color="primary"  variant="h6">{active && active.title}</Typography>
           <Typography color="textsondary" variant="caption">{active && active.subtitle}</Typography>

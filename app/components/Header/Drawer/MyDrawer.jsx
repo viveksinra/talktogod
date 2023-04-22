@@ -2,7 +2,7 @@
 import "./drawerStyle.css";
 import MainContext from "../../Context/MainContext";
 import { DRAWER,SETSELECTED } from "../../Context/types";
-import {Tooltip, IconButton,Avatar,InputBase,Divider,List,ListItem,ListItemButton, ListItemAvatar,Typography } from '@mui/material/';
+import {Tooltip, IconButton,Avatar,InputBase,Divider,List,ListItem,ListItemButton, ListItemAvatar,Typography  } from '@mui/material/';
 import { useContext } from "react";
 import { FcGlobe,FcSearch } from "react-icons/fc";
 
@@ -15,7 +15,6 @@ const MyDrawer = ({mobile}) => {
       // var oldActive =state.searchResult.find(a=>a.active === true)
       // oldActive.active = false;
       selectedItem.active = true;
-
       dispatch({type:SETSELECTED,payload:selectedItem})
 
     }
@@ -38,7 +37,6 @@ const MyDrawer = ({mobile}) => {
       </div>
 
       <div id="searchBg">
-
       <FcSearch style={{fontSize:25}}  />
       <Divider orientation="vertical" sx={{ height: 28, m: 0.5, }} />
       <InputBase
