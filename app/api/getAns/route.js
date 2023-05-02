@@ -9,7 +9,7 @@ const openai = new OpenAIApi(configuration);
 
 
 export async function GET(request) { 
-  const {myQuery} = request.query;
+  // const {myQuery} = request.query;
   await connectMongo();
   const fullQuest = "what is meaning of your name" 
   const godUserName = "lordganesh"
