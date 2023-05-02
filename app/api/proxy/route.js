@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export async function GET(request) { 
-    // const {myQuery} = request.query;
+ 
  let finData = ""
  let data = {}
     const headers = {
