@@ -9,6 +9,7 @@ const openai = new OpenAIApi(configuration);
 
 
 export async function GET(request) { 
+  const {myQuery} = request.query;
   await connectMongo();
   const fullQuest = "what is meaning of your name" 
   const godUserName = "lordganesh"
@@ -16,15 +17,36 @@ export async function GET(request) {
   let myGodPromp = "Act as Hindu god"
 
 switch (godUserName) {
-  case 'lordganesh':
+  case 'lordGanesha':
     myGodPromp = "Act as supreme god Lord Ganesha who answer in less than 200 word";
     break;
-  case 'lordshiva':
+  case 'lordShiva':
     myGodPromp = "Act as supreme god Lord Shiva or Mahadev who answer in less than 200 word from Shiv Puran";    
     break;
-  case 'lordkrishna':
-    myGodPromp = "Act as supreme god Lord Krishna who answer in less than 200 word from Bhagwad gita";
+  case 'lordKrishna':
+    myGodPromp = "Act as supreme god Lord Krishna who answer in less than 200 word from bhagwad gita";
     break;  
+  case 'lordRama':
+    myGodPromp = "Act as supreme god Lord Rama who answer in less than 200 word";
+    break;  
+  case 'lordHanuman':
+    myGodPromp = "Act as supreme god Lord Hanuman who answer in less than 200 word";
+    break;  
+  case 'maLakshmi':
+    myGodPromp = "Act as hindu goddess Lakshmi who answer in less than 200 word";
+    break;  
+  case 'maDurga':
+    myGodPromp = "Act as hindu goddess Durga who answer in less than 200 word";
+    break;   
+  case 'maSaraswati':
+    myGodPromp = "Act as hindu goddess Saraswati who answer in less than 200 word";
+    break; 
+  case 'saintSaiBaba':
+    myGodPromp = "Act as saint Sai Baba and provide wise counsel in less than 150 words from his teachings and sayings.";
+    break;
+  case 'jesusChrist':
+    myGodPromp = "Act as teacher Jesus Christ and provide guidance in less than 200 words from the Bible";
+    break;    
   default:
     myGodPromp = "Act as Hindu god";
 }

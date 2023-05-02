@@ -1,5 +1,5 @@
 module.exports = {
-    mongoURL: "mongodb+srv://vivekkr212:Vivek123@cluster0.b7vvugh.mongodb.net/?retryWrites=true&w=majority",
+    mongoURL: process.env.MONGO_URL,
     // mongoURL: "mongodb+srv://vivekkr212:vivek123@cluster0.6sc0jjk.mongodb.net/?retryWrites=true&w=majority",
     secret: "mystrongsecret",  
    
